@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background: var(--background-image, url('assets/bg ab.svg')) repeat center center;
+    background-size: cover;
+    font-family: "Quicksand", sans-serif;
+    color: #5a3019;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+.appbar-text {
+    font-family: 'Poppins', sans-serif; /* Or any other font you prefer */
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #5a3019; /* Dark Honey Brown */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Enable positioning of child elements */
+}
+
+/* AppBar Styles */
+.MuiAppBar-root {
+    background-color: #0C2626 !important;
+    color: #CC9918 !important;
+    border-bottom: 2px solid #CC9918;
+}
+
+.MuiTypography-root {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Drawer Styles */
+.MuiDrawer-paper {
+    background-color: #FFB02E !important;
+    color: #5a3019;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-top: 20px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Drawer Header */
+.drawer-header {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 204, 102, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 120px;
+    transition: padding-top 0.2s ease-in-out;
+}
+
+/* Visualizer Container */
+.visualizer-container {
+    background: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px; /* Ensure space is added above for controls */
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Controls */
+.controls {
+    position: fixed; /* Position the controls at the top-right */
+    top: 80px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for controls */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for the controls */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px; /* Add spacing between control items */
+}
+
+.control-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.control-button button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.control-button button img {
+    width: 24px;
+    height: 24px;
+}
+
+button {
+    border-radius: 10px;
+}
+
+.control-icon {
+    font-size: 1.5rem;
+    color: #5A3019;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.control-icon:hover {
+    color: #CC9918;
+}
+
+/* Sorting Animation Box */
+.sorting-animation-box {
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(45deg, rgba(255, 204, 102, 0.8), rgba(255, 178, 51, 0.6));
+}
+
+/* Description */
+.description {
+    font-size: 1rem;
+    color: #5a3019;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+/* Drawer Item Styles */
+.drawer-item {
+    margin: 10px auto;
+    width: 80%;
+    padding: 12px;
+    background-color: #DDA632;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.drawer-item:hover {
+    background-color: #E5B549;
+    transform: scale(1.05);
+}
+.canvas-container {
+    display: flex;
+    justify-content: center; /* Center canvas horizontally */
+    align-items: center; /* Center canvas vertically */
+    flex-direction: column;
+  }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .MuiAppBar-root {
+        padding: 0 10px;
+    }
+
+    .MuiTypography-root {
+        font-size: 1rem;
+    }
+
+    .drawer-item {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .sorting-header {
+        font-size: 1.5rem;
+    }
+
+    .control-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .sorting-animation-box {
+        height: 250px;
+    }
+}
